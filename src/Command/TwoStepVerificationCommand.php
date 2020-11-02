@@ -16,16 +16,13 @@ namespace Sonata\UserBundle\Command;
 use FOS\UserBundle\Model\UserManagerInterface;
 use Sonata\UserBundle\GoogleAuthenticator\Helper;
 use Sonata\UserBundle\Model\UserInterface;
-use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
+use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
-/**
- * NEXT_MAJOR: stop extending ContainerAwareCommand.
- */
-class TwoStepVerificationCommand extends ContainerAwareCommand
+class TwoStepVerificationCommand extends Command
 {
     /**
      * @var ?Helper
